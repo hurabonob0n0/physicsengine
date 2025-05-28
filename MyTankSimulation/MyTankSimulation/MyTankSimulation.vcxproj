@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a2fe7e83-5c5b-4773-a76a-6725cedcf596}</ProjectGuid>
+    <RootNamespace>MyTankSimulation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../bin/</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;RENDER_SNIPPET;PX_PHYSX_STATIC_LIB;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../PhysX-4.1\physx\include;../PhysX-4.1\physx\..\pxshared\include;../PhysX-4.1\physx\source\foundation\include;../PhysX-4.1\physx\snippets\Graphics\include\win32\GL;../PhysX-4.1\physx\snippets;../PhysX-4.1\physx\snippets/snippetvehicletank</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXExtensions_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysX_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXPvdSDK_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXVehicle_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXCharacterKinematic_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXCooking_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXCommon_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\PhysXFoundation_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\SnippetUtils_static_64.lib;../PhysX-4.1\physx\bin\win.x86_64.vc142.mt\debug\SnippetRender_static_64.lib;../PhysX-4.1\physx\snippets\Graphics\lib\win64\glut\glut32.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetcommon\ClassicMain.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicle4WCreate.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleCreate.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleFilterShader.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleNoDriveCreate.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleSceneQuery.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleTankCreate.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleTireFriction.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTank.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTankRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleConcurrency.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleCreate.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleFilterShader.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleSceneQuery.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleTireFriction.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleWheelQueryResult.h" />
+    <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTank.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
