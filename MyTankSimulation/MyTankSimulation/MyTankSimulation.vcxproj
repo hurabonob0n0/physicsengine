@@ -106,7 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;RENDER_SNIPPET;PX_PHYSX_STATIC_LIB;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>../PhysX-4.1\physx\include;../PhysX-4.1\physx\..\pxshared\include;../PhysX-4.1\physx\source\foundation\include;../PhysX-4.1\physx\snippets\Graphics\include\win32\GL;../PhysX-4.1\physx\snippets;../PhysX-4.1\physx\snippets/snippetvehicletank</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,7 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetcommon\ClassicMain.cpp" />
+    <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetcommon\ClassicMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicle4WCreate.cpp" />
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleCreate.cpp" />
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleFilterShader.cpp" />
@@ -139,6 +143,7 @@
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleTireFriction.cpp" />
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTank.cpp" />
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTankRender.cpp" />
+    <ClCompile Include="MyPhysics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleConcurrency.h" />
@@ -148,6 +153,7 @@
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleTireFriction.h" />
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleWheelQueryResult.h" />
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTank.h" />
+    <ClInclude Include="MyPhysics.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

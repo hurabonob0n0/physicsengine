@@ -48,6 +48,9 @@
     <ClCompile Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTankRender.cpp">
       <Filter>Snippets</Filter>
     </ClCompile>
+    <ClCompile Include="MyPhysics.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehiclecommon\SnippetVehicleConcurrency.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="..\PhysX-4.1\physx\snippets\snippetvehicletank\SnippetVehicleTank.h">
       <Filter>Snippets</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPhysics.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
