@@ -1,0 +1,19 @@
+﻿  SnippetVehicle4WCreate.cpp
+  PxVehicleSDK.cpp
+C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\PhysX-4.1\physx\source\physxvehicle\src\PxVehicleSDK.cpp(42,10): error C1083: 포함 파일을 열 수 없습니다. 'PxVehicleMetaDataObjects.h': No such file or directory
+  PxVehicleSerialization.cpp
+C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\PhysX-4.1\physx\source\physxvehicle\src\PxVehicleSerialization.cpp(34,10): error C1083: 포함 파일을 열 수 없습니다. 'PxVehicleMetaDataObjects.h': No such file or directory
+  PxVehicleSuspWheelTire4.cpp
+  PxVehicleUpdate.cpp
+  MyPhysics.cpp
+C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\MyTankSimulation\MyPhysics.h(33,22): warning C4251: 'CMyPhysics::gAllocator': 'physx::PxDefaultAllocator'에서는 'CMyPhysics'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 함
+  (소스 파일 'MyPhysics.cpp'을(를) 컴파일하는 중)
+      C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\PhysX-4.1\physx\include\extensions\PxDefaultAllocator.h(89,7):
+      'physx::PxDefaultAllocator' 선언을 참조하십시오.
+  
+C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\MyTankSimulation\MyPhysics.h(34,25): warning C4251: 'CMyPhysics::gErrorCallback': 'physx::PxDefaultErrorCallback'에서는 'CMyPhysics'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 함
+  (소스 파일 'MyPhysics.cpp'을(를) 컴파일하는 중)
+      C:\Users\sangh\OneDrive\바탕 화면\physicsengine\MyTankSimulation\PhysX-4.1\physx\include\extensions\PxDefaultErrorCallback.h(49,8):
+      'physx::PxDefaultErrorCallback' 선언을 참조하십시오.
+  
+  코드를 생성하고 있습니다...

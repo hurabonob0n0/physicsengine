@@ -13,10 +13,16 @@
 #include "../snippetcommon/SnippetPVD.h"
 #include "../snippetutils/SnippetUtils.h"
 
+#ifdef ENGINE_EXPORTS
+#define ENGINE_DLL _declspec(dllexport)
+#else
+#define ENGINE_DLL _declspec(dllimport)
+#endif
+
 using namespace physx;
 using namespace snippetvehicle;
 
-class CMyPhysics
+class ENGINE_DLL CMyPhysics
 {
 public:
 	CMyPhysics() {};
@@ -57,6 +63,6 @@ public:
 private:
 	VehicleDesc InitTankDesc();
 	void Initialize_Engine_and_Terrain();
-	void Add_Actor_Tank();
+	void Add_Actor_Tank(float x,float y,float z);
 };
 

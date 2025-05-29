@@ -122,7 +122,7 @@ PxVehiclePadSmoothingData gPadSmoothingData=
 	}
 };
 
-PxVehicleDriveTankRawInputData gVehicleInputData(PxVehicleDriveTankControlModel::eSTANDARD);
+//PxVehicleDriveTankRawInputData gVehicleInputData(PxVehicleDriveTankControlModel::eSTANDARD);
 
 enum DriveMode
 {
